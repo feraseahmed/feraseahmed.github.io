@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Feras Essa Ahmed — Operations Engineer at Saudi Aramco, Ras Tanura Refinery. Plant operations, project management, and applied energy economics." />
+<meta property="og:title" content="Feras Essa Ahmed" />
+<meta property="og:description" content="Operations Engineer — Crude Stabilization & NGL Fractionation, Saudi Aramco Ras Tanura Refinery." />
+<meta property="og:type" content="website" />
+
+<title>Feras Essa Ahmed</title>
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style id="pageStyle">
+  :root{
+    --bg:#f6f1ea;
+    --surface:#fffdf9;
+    --surface-2:#efe6da;
+    --ink:#221a1a;
+    --muted:#6b5d5a;
+    --line:#e3d8cc;
+    --line-strong:#cdbba8;
+    --accent:#8a6a2f;
+    --accent2:#6e1f2d;
+    --accent2-soft:rgba(110,31,45,0.08);
+    --shadow:rgba(60,20,25,0.16);
+
+    --band-bg:#5a1824;
+    --band-ink:#f7efe6;
+    --band-muted:#dcc6c2;
+    --band-gold:#d4b27a;
+    --band-line:rgba(247,239,230,0.18);
+    --band-chip:rgba(247,239,230,0.08);
+
+    --font-display:'Source Serif 4',Georgia,'Times New Roman',serif;
+    --font-body:'Source Sans 3',-apple-system,'Segoe UI',Roboto,sans-serif;
+    --font-mono:'JetBrains Mono',Consolas,'SFMono-Regular',monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#171012;
+      --surface:#221719;
+      --surface-2:#1d1415;
+      --ink:#f3ece6;
+      --muted:#b2a29d;
+      --line:#3a2a2c;
+      --line-strong:#4d3a3c;
+      --accent:#d4b27a;
+      --accent2:#d98a95;
+      --accent2-soft:rgba(217,138,149,0.13);
+      --shadow:rgba(0,0,0,0.5);
+      --band-bg:#3a1118;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#171012;
+    --surface:#221719;
+    --surface-2:#1d1415;
+    --ink:#f3ece6;
+    --muted:#b2a29d;
+    --line:#3a2a2c;
+    --line-strong:#4d3a3c;
+    --accent:#d4b27a;
+    --accent2:#d98a95;
+    --accent2-soft:rgba(217,138,149,0.13);
+    --shadow:rgba(0,0,0,0.5);
+    --band-bg:#3a1118;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.65;
+    font-size:17px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ color:var(--accent); }
+  h1,h2,h3{ font-family:var(--font-display); font-weight:600; margin:0; text-wrap:balance; }
+  ::selection{ background:var(--accent2-soft); }
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:2px; }
+
+  .wrap{ max-width:720px; margin:0 auto; padding:0 1.5rem; }
+
+  /* ---------- masthead: header + hero share the navy band ---------- */
+  .site-header{
+    position:sticky; top:0; z-index:60;
+    background:var(--band-bg);
+    border-bottom:1px solid var(--band-line);
+  }
+  .header-row{
+    display:flex; align-items:center; gap:1.3rem; flex-wrap:wrap; row-gap:.6rem;
+    padding-top:.85rem; padding-bottom:.85rem;
+  }
+  .brand{
+    font-family:var(--font-display); font-weight:600; font-size:1.05rem;
+    text-decoration:none; color:var(--band-ink); flex:none;
+  }
+  .dot-nav{
+    flex:1 1 auto; min-width:0; position:relative;
+    display:flex; align-items:center; gap:1.3rem;
+    overflow-x:auto; scrollbar-width:none; padding:.3rem 0;
+  }
+  .dot-nav::-webkit-scrollbar{ display:none; }
+  .dot-link{
+    position:relative; z-index:1; display:flex; align-items:center; gap:.5rem;
+    text-decoration:none; color:var(--band-muted); white-space:nowrap; padding:.3rem 0;
+  }
+  .dot-link .dot{
+    width:8px; height:8px; border-radius:50%; background:transparent;
+    border:2px solid rgba(244,241,230,0.35); transition:background .2s ease, border-color .2s ease, transform .2s ease;
+    flex:none;
+  }
+  .dot-link em{
+    font-family:var(--font-mono); font-style:normal; font-size:.74rem; letter-spacing:.03em;
+    text-transform:uppercase; transition:color .2s ease;
+  }
+  .dot-link:hover .dot{ border-color:var(--band-gold); }
+  .dot-link.active .dot{ background:var(--band-gold); border-color:var(--band-gold); transform:scale(1.15); }
+  .dot-link.active em{ color:var(--band-ink); }
+  @media (max-width:1000px){ .dot-link em{ display:none; } }
+  @media (max-width:700px){ .dot-nav{ flex-basis:100%; order:3; } }
+
+  .controls{ flex:none; display:flex; align-items:center; gap:.5rem; }
+  .icon-btn{
+    width:32px; height:32px; border-radius:50%; border:1px solid var(--band-line); background:var(--band-chip);
+    display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--band-ink); flex:none;
+  }
+  .icon-btn:hover{ border-color:var(--band-gold); }
+  .icon-btn svg{ width:16px; height:16px; }
+  .icon-btn .icon-moon{ display:none; }
+  :root[data-theme="dark"] .icon-btn .icon-sun{ display:none; }
+  :root[data-theme="dark"] .icon-btn .icon-moon{ display:block; }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .icon-btn .icon-sun{ display:none; }
+    :root:not([data-theme="light"]) .icon-btn .icon-moon{ display:block; }
+  }
+  .ctrl-btn{
+    font:inherit; font-family:var(--font-mono); font-size:.78rem; padding:.4rem .75rem; border-radius:6px;
+    border:1px solid var(--band-line); background:var(--band-chip); color:var(--band-ink); cursor:pointer;
+  }
+  .ctrl-btn:hover{ border-color:var(--band-gold); color:var(--band-gold); }
+  .ctrl-btn.accent{ background:var(--band-gold); border-color:var(--band-gold); color:var(--band-bg); }
+  .ctrl-btn.accent:disabled{ opacity:.6; cursor:default; }
+  .ctrl-status{ font-family:var(--font-mono); font-size:.72rem; color:var(--band-muted); }
+
+  /* ---------- hero (part of the masthead band) ---------- */
+  .hero{
+    background:var(--band-bg); color:var(--band-ink);
+    padding:clamp(3.5rem,8vw,5.5rem) 0 clamp(2.5rem,6vw,4rem);
+    border-bottom:2px solid var(--band-gold);
+    animation:hero-in .6s ease;
+  }
+  @keyframes hero-in{ from{ opacity:0; transform:translateY(10px); } to{ opacity:1; transform:none; } }
+  @media (prefers-reduced-motion: reduce){ .hero{ animation:none; } }
+  .kicker{
+    font-family:var(--font-mono); font-size:.8rem; letter-spacing:.05em; text-transform:uppercase;
+    color:var(--band-gold); margin:0 0 1rem;
+  }
+  .hero h1{ font-size:clamp(2.5rem,6vw,4rem); line-height:1.02; font-weight:700; color:var(--band-ink); }
+  .hero .org{ color:var(--band-muted); font-size:1.02rem; margin:.9rem 0 0; }
+  .hero .lede{ color:var(--band-muted); font-size:1.08rem; max-width:56ch; margin:1.3rem 0 0; }
+  .contact-line{ margin-top:1.8rem; display:flex; flex-wrap:wrap; gap:.7rem 1.6rem; font-size:.92rem; color:var(--band-muted); }
+  .ci{ display:inline-flex; align-items:center; gap:.45rem; min-width:0; }
+  .ci > svg{ width:16px; height:16px; flex:none; color:var(--accent); }
+  .ci a{ color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line-strong); overflow-wrap:anywhere; }
+  .ci a:hover{ color:var(--accent2); border-color:var(--accent2); }
+  .hero .ci > svg{ color:var(--band-gold); }
+  .hero .ci a{ color:var(--band-ink); border-color:rgba(247,239,230,0.35); }
+  .hero .ci a:hover{ color:var(--band-gold); border-color:var(--band-gold); }
+  .hero .copy-btn{ color:var(--band-muted); }
+  .hero .copy-btn:hover{ color:var(--band-gold); border-color:var(--band-line); background:var(--band-chip); }
+
+  /* ---------- sections ---------- */
+  section{ padding:clamp(2.6rem,6vw,3.8rem) 0; border-top:1px solid var(--line); }
+  section h2{ font-size:clamp(1.7rem,3.2vw,2.2rem); }
+  section > .wrap > p{ color:var(--muted); margin:1rem 0 0; max-width:60ch; }
+
+  .js .reveal{ opacity:0; transform:translateY(16px); transition:opacity .55s ease, transform .55s ease; }
+  .js .reveal.in-view{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){ .js .reveal{ opacity:1; transform:none; transition:none; } }
+
+  /* about stat strip */
+  .stats-row{ display:flex; flex-wrap:wrap; margin-top:2.2rem; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .stat-cell{ flex:1 1 160px; padding:1.3rem 1.3rem 1.3rem 0; }
+  .stat-cell + .stat-cell{ border-left:1px solid var(--line); padding-left:1.3rem; }
+  .stat-num{ font-family:var(--font-display); font-size:1.9rem; font-weight:600; color:var(--accent2); display:block; font-variant-numeric:tabular-nums; }
+  .stat-label{ font-family:var(--font-mono); font-size:.72rem; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); margin-top:.5rem; display:block; }
+
+  /* role / timeline */
+  .role-head{ display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; align-items:baseline; margin-top:1.6rem; }
+  .role-head h3{ font-size:1.2rem; }
+  .role-head .dates{ font-family:var(--font-mono); font-size:.8rem; color:var(--muted); white-space:nowrap; }
+  .role-sub{ color:var(--muted); font-size:.92rem; margin-top:.2rem; }
+
+  ul.plain{ margin:1rem 0 0; padding-left:1.2rem; color:var(--muted); }
+  ul.plain li{ margin-bottom:.6rem; }
+  ul.plain li::marker{ color:var(--accent2); }
+
+  /* projects */
+  .proj-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.4rem; margin-top:2rem; }
+  @media (max-width:700px){ .proj-grid{ grid-template-columns:1fr; } }
+  .proj-card{
+    border:1px solid var(--line); border-top:3px solid var(--accent2); padding:1.6rem; background:var(--surface);
+    display:flex; flex-direction:column; gap:.7rem;
+    transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  }
+  .proj-card:hover{ transform:translateY(-3px); border-top-color:var(--accent); box-shadow:0 14px 28px -18px var(--shadow); }
+  .proj-card h3{ font-size:1.15rem; }
+  .proj-card .dates{ font-family:var(--font-mono); font-size:.76rem; color:var(--muted); white-space:nowrap; }
+  .proj-card .role-sub{ margin-top:0; }
+  .tag-pill{
+    font-family:var(--font-mono); font-size:.7rem; letter-spacing:.02em; color:var(--accent2);
+    background:var(--accent2-soft); border:1px solid var(--accent2); border-radius:3px;
+    padding:.28rem .7rem; width:fit-content;
+  }
+  details.proj-details{ border-top:1px dashed var(--line); padding-top:.75rem; margin-top:.2rem; }
+  details.proj-details summary{
+    cursor:pointer; list-style:none; font-family:var(--font-mono); font-size:.76rem; letter-spacing:.03em;
+    text-transform:uppercase; color:var(--accent); display:flex; align-items:center; gap:.5rem; user-select:none;
+  }
+  details.proj-details summary::-webkit-details-marker{ display:none; }
+  details.proj-details summary::before{ content:"+"; display:inline-block; width:14px; text-align:center; }
+  details.proj-details[open] summary::before{ content:"\2212"; }
+  details.proj-details ul{ margin-top:.9rem; }
+
+  /* credentials */
+  .cred-block{ margin-top:2rem; max-width:56ch; }
+  .cred-block h3{ font-family:var(--font-mono); font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); font-weight:400; margin-bottom:1rem; }
+  .badges{ display:flex; flex-direction:column; gap:.6rem; }
+  .badge{
+    font-size:.92rem; color:var(--ink); padding:.6rem .8rem; border:1px solid var(--line); border-radius:4px;
+    background:var(--surface); transition:border-color .15s ease;
+  }
+  .badge:hover{ border-color:var(--accent2); }
+  .edu-block{ margin-top:1.8rem; }
+  .edu-block p{ color:var(--muted); font-size:.92rem; margin-top:.3rem; }
+
+  /* leadership */
+  .lead-list{ list-style:none; margin:1.6rem 0 0; padding:0; display:flex; flex-direction:column; gap:.9rem; }
+  .lead-list li{
+    display:flex; gap:.9rem; padding:.9rem 1.1rem; border:1px solid var(--line); border-radius:4px;
+    background:var(--surface); transition:border-color .15s ease, transform .15s ease;
+  }
+  .lead-list li:hover{ border-color:var(--accent2); transform:translateX(3px); }
+  .lead-list .ltag{
+    font-family:var(--font-mono); font-size:.66rem; color:var(--accent2); border:1px solid var(--line-strong);
+    border-radius:3px; padding:.2rem .4rem; height:fit-content; white-space:nowrap;
+  }
+  .fulfillment{ font-family:var(--font-display); font-size:1.25rem; font-weight:400; font-style:italic; color:var(--ink); margin-top:1.8rem; max-width:52ch; }
+
+  /* reading */
+  .chip-row{ display:flex; flex-wrap:wrap; gap:.55rem; margin:1.6rem 0 .3rem; }
+  .chip{
+    font:inherit; font-family:var(--font-mono); font-size:.74rem; letter-spacing:.03em; text-transform:uppercase;
+    padding:.4rem .85rem; border-radius:3px; border:1px solid var(--line-strong); background:var(--surface);
+    color:var(--muted); cursor:pointer; transition:background .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .chip:hover{ border-color:var(--accent); color:var(--ink); }
+  .chip[aria-pressed="true"]{ background:var(--accent2); border-color:var(--accent2); color:var(--bg); }
+  .reading-list{ list-style:none; margin:1rem 0 0; padding:0; }
+  .reading-list li{ display:flex; gap:.8rem; align-items:baseline; padding:.75rem 0; border-bottom:1px solid var(--line); }
+  .reading-list li:last-child{ border-bottom:none; }
+  .reading-list li[hidden]{ display:none; }
+  .cat-tag{
+    font-family:var(--font-mono); font-size:.66rem; color:var(--accent); border:1px solid var(--line-strong);
+    border-radius:3px; padding:.15rem .4rem; white-space:nowrap; flex:none;
+  }
+
+  /* footer */
+  .site-footer{ border-top:1px solid var(--line); background:var(--surface-2); padding:clamp(2.8rem,6vw,4rem) 0 2.4rem; }
+  .footer-grid{ display:flex; justify-content:space-between; gap:2rem; flex-wrap:wrap; align-items:flex-end; }
+  .contact-info{ display:flex; flex-direction:column; gap:.75rem; font-size:.98rem; color:var(--muted); }
+  .copy-btn{
+    display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:6px;
+    border:1px solid transparent; background:none; padding:0; color:var(--muted); cursor:pointer; flex:none;
+    transition:color .15s ease, border-color .15s ease, background .15s ease;
+  }
+  .copy-btn:hover{ color:var(--accent2); border-color:var(--line); background:var(--surface); }
+  .copy-btn svg{ width:15px; height:15px; }
+  .copy-btn .i-check{ display:none; }
+  .copy-btn.copied .i-copy{ display:none; }
+  .copy-btn.copied .i-check{ display:block; }
+  .fine{ margin-top:2rem; padding-top:1.4rem; border-top:1px solid var(--line); font-family:var(--font-mono); font-size:.72rem; color:var(--muted); letter-spacing:.02em; }
+
+  .to-top{
+    position:fixed; right:1.4rem; bottom:1.4rem; width:40px; height:40px; border-radius:50%;
+    background:var(--accent2); border:1px solid var(--accent2); color:var(--bg); text-decoration:none;
+    display:flex; align-items:center; justify-content:center; font-size:1.05rem; z-index:50;
+    opacity:0; pointer-events:none; transform:translateY(6px);
+    transition:opacity .2s ease, transform .2s ease, background .2s ease;
+  }
+  .to-top.visible{ opacity:1; pointer-events:auto; transform:none; }
+  .to-top:hover{ background:var(--accent); border-color:var(--accent); }
+
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a href="#top" class="brand">Feras Essa Ahmed</a>
+    <nav class="dot-nav" id="dotNav" aria-label="Section navigation">
+      <a href="#about" data-section-link class="dot-link" aria-label="Jump to About"><i class="dot"></i><em>About</em></a>
+      <a href="#experience" data-section-link class="dot-link" aria-label="Jump to Experience"><i class="dot"></i><em>Experience</em></a>
+      <a href="#projects" data-section-link class="dot-link" aria-label="Jump to Projects"><i class="dot"></i><em>Projects</em></a>
+      <a href="#credentials" data-section-link class="dot-link" aria-label="Jump to Credentials"><i class="dot"></i><em>Credentials</em></a>
+      <a href="#interests" data-section-link class="dot-link" aria-label="Jump to Leadership"><i class="dot"></i><em>Leadership</em></a>
+      <a href="#reading" data-section-link class="dot-link" aria-label="Jump to Reading"><i class="dot"></i><em>Reading</em></a>
+      <a href="#contact" data-section-link class="dot-link" aria-label="Jump to Contact"><i class="dot"></i><em>Contact</em></a>
+    </nav>
+    <div class="controls">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top"></main>
+
+<footer class="site-footer" id="contact"></footer>
+
+<a href="#top" class="to-top" id="toTop" aria-label="Back to top">↑</a>
+
+<script id="pageScript">
+(function(){
+
+  // ---------- content state ----------
+  var STATE = {
+    hero: {
+      name: "Feras Essa Ahmed",
+      role: "Operations Engineer — Crude Stabilization & NGL Fractionation",
+      org: "Saudi Aramco, Ras Tanura Refinery",
+      lede: "I combine plant operations, project management, and applied economic analysis — delivering ~$470M in avoided production value, and increasingly focused on connecting engineering operations with economic and strategic decision-making in the energy and industrial sector."
+    },
+    contact: {
+      location: "Dammam, Saudi Arabia",
+      email: "Feras_E_Ahmed@hotmail.com",
+      linkedin: "linkedin.com/in/feraseahmed"
+    },
+    about: {
+      p1: "Chemical engineer at Saudi Aramco's Ras Tanura Refinery, combining plant operations, project management, and applied economic analysis across industrial and resource-based operations. I've delivered ~$470M in avoided production value and led the technical case — including the economic evaluation — behind a strategic feedstock diversification project worth an estimated $1.2M/day.",
+      p2: "Day to day that means owning the MOC lifecycle end to end (79 plant modifications and counting), facilitating HAZOP, PHA, and PSSR reviews, and running root cause analysis that separates recurring patterns from one-off events.",
+      p3: "I'm increasingly focused on connecting engineering operations with economic and strategic decision-making in the energy and industrial sector — from supply-demand fundamentals to pricing and trade flows.",
+      stats: [
+        { value: "~$470M", label: "avoided production value delivered" },
+        { value: "$1.2M/day", label: "est. benefit, Hasbah project" },
+        { value: "79", label: "MOCs led end-to-end" }
+      ]
+    },
+    experience: {
+      title: "Operations Engineer — Saudi Aramco, Ras Tanura Refinery",
+      dates: "Feb 2024 – Present",
+      sub: "Crude Stabilization & NGL Fractionation Units",
+      bullets: [
+        "Deferred a scheduled T&I by one year based on operational data analysis ahead of the unit's planned decommissioning, eliminating a ~45-day shutdown and avoiding ~6.75 MMbbl of production loss (≈$470M in production value at $70/bbl).",
+        "Monitored plant parameters and implemented process improvements to enhance production efficiency and yield.",
+        "Owned end-to-end Management of Change (MOC) across 79 plant modifications, weighing cost, risk, and operational trade-offs.",
+        "Facilitated HAZOP, PHA, and PSSR reviews and executed Corporate Technical Alert (CTA) closures, strengthening plant safety and reliability.",
+        "Investigated operational disruptions to root cause, quantifying reliability improvements through data analysis."
+      ]
+    },
+    projects: [
+      {
+        title: "Hasbah Repurposing Project",
+        dates: "Jun 2026 – Aug 2026",
+        sub: "HDO → Arabian Light Crude service",
+        tag: "Est. benefit ≈ $1.2M/day",
+        bullets: [
+          "Managed the engineering redesign and delivery of a strategic feedstock diversification project, freeing critical pipeline capacity and strengthening the Kingdom's crude export capability.",
+          "Directed cross-functional coordination with Worley (EPC) and Aramco's P&CSD, validating hydraulic/surge analyses and aligning scope, schedule, and design deliverables with corporate engineering standards.",
+          "Built the cost-versus-return case for the project, estimating an economic benefit of $1.2M/day."
+        ]
+      },
+      {
+        title: "Crude Supply Resilience Project",
+        dates: "Apr 2026 – May 2026",
+        sub: "Crude supply continuity planning",
+        tag: "~250,000 bbl/day protected",
+        bullets: [
+          "Drove the effort to identify 3 alternate crude delivery scenarios to protect ~250,000 bbl/day of crude supply to Ras Tanura Refinery.",
+          "Validated each scenario's feasibility to ensure continuity of oil supply during main-source outages.",
+          "Implemented the solution and conducted a live test run, confirming operational feasibility of the alternate routing."
+        ]
+      }
+    ],
+    credentials: {
+      eduDegree: "B.S., Chemical Engineering",
+      eduSchool: "King Fahd University of Petroleum & Minerals (KFUPM), Dhahran",
+      eduDates: "Sep 2018 – Dec 2023",
+      eduCoursework: "Relevant coursework: Process Design & Economics · Statistics & Probability · Numerical Analysis",
+      certs: [
+        "Fundamentals of Engineering (FE) — NCEES",
+        "CAPM — Project Management Institute",
+        "Business Analytics Nanodegree — Udacity",
+        "YLAB Academy — one of the final 60 candidates chosen through a multi-stage interview process"
+      ]
+    },
+    interests: {
+      list: [
+        "President, Waayona Club — KFUPM (30-person team)",
+        "Co-founder, Reader Challenge Initiative — 80+ participants, scaled into a mobile application",
+        "Arabic Language Teacher — FASEH Initiative",
+        "1st Place, Public Debate Competition — KFUPM",
+        "Member, KFUPM Delegation to South Korea"
+      ],
+      note: "This work has been a primary source of meaning and fulfillment for me."
+    },
+    reading: {
+      intro: "Year-to-Date 2026 Reading List",
+      items: [
+        { text: "The Pivotal Cities — how certain cities drove the rise and fall of civilizations", cat: "HIS" },
+        { text: "Before History Leaves Us", cat: "HIS" },
+        { text: "Ethics in the Conflicts of Modernity", cat: "PHI" },
+        { text: "This Is Philosophy of Mind — Pete Mandik", cat: "PHI" },
+        { text: "Solace in the Departed", cat: "LIT" },
+        { text: "The Diving Bell and the Butterfly — Jean-Dominique Bauby", cat: "LIT" },
+        { text: "The Twins of Auschwitz", cat: "LIT" },
+        { text: "An Introduction to Energy Economics and Policy", cat: "NRG" }
+      ]
+    },
+    footerTagline: "Feras Essa Ahmed — Operations Engineer, Saudi Aramco"
+  };
+
+  // ---------- helpers ----------
+  function esc(s){
+    return String(s == null ? "" : s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+  function escAttr(s){ return esc(s).replace(/"/g,"&quot;"); }
+  var SV = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
+  var IC = {
+    pin: SV + '<path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
+    mail: SV + '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>',
+    li: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>',
+    copy: '<svg class="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg>',
+    check: '<svg class="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>'
+  };
+  function liHref(u){ u = String(u || ""); return /^https?:\/\//.test(u) ? u : "https://" + u; }
+  function contactItems(c, editable){
+    function ed(path){ return editable ? ' data-path="' + path + '" contenteditable="false"' : ''; }
+    return '<span class="ci">' + IC.mail + '<a href="mailto:' + escAttr(c.email) + '"' + ed("contact.email") + '>' + esc(c.email) + '</a>'
+        + '<button class="copy-btn" type="button" data-copy="' + escAttr(c.email) + '" aria-label="Copy email" title="Copy email">' + IC.copy + IC.check + '</button></span>'
+      + '<span class="ci">' + IC.li + '<a href="' + escAttr(liHref(c.linkedin)) + '" target="_blank" rel="noopener">LinkedIn</a></span>'
+      + '<span class="ci">' + IC.pin + '<span' + ed("contact.location") + '>' + esc(c.location) + '</span></span>';
+  }
+
+  function setPath(obj, path, val){
+    var keys = path.split(".");
+    var last = keys.pop();
+    var target = keys.reduce(function(o,k){ return o[/^\d+$/.test(k) ? +k : k]; }, obj);
+    target[/^\d+$/.test(last) ? +last : last] = val;
+  }
+
+  function bulletList(items, basePath){
+    return '<ul class="plain">' + items.map(function(t,i){
+      return '<li data-path="' + basePath + '.' + i + '" contenteditable="false">' + esc(t) + '</li>';
+    }).join("") + '</ul>';
+  }
+
+  // ---------- render ----------
+  function renderHero(s){
+    return '<div class="hero"><div class="wrap">'
+      + '<p class="kicker" data-path="hero.role" contenteditable="false">' + esc(s.hero.role) + '</p>'
+      + '<h1 data-path="hero.name" contenteditable="false">' + esc(s.hero.name) + '</h1>'
+      + '<p class="org" data-path="hero.org" contenteditable="false">' + esc(s.hero.org) + '</p>'
+      + '<p class="lede" data-path="hero.lede" contenteditable="false">' + esc(s.hero.lede) + '</p>'
+      + '<div class="contact-line">' + contactItems(s.contact, true) + '</div>'
+      + '</div></div>';
+  }
+
+  function renderAbout(s){
+    var statsHtml = s.about.stats.map(function(st,i){
+      return '<div class="stat-cell">'
+        + '<b class="stat-num" data-path="about.stats.' + i + '.value" contenteditable="false">' + esc(st.value) + '</b>'
+        + '<span class="stat-label" data-path="about.stats.' + i + '.label" contenteditable="false">' + esc(st.label) + '</span>'
+        + '</div>';
+    }).join("");
+    return '<section id="about" class="reveal"><div class="wrap">'
+      + '<h2>About</h2>'
+      + '<p data-path="about.p1" contenteditable="false">' + esc(s.about.p1) + '</p>'
+      + '<p data-path="about.p2" contenteditable="false">' + esc(s.about.p2) + '</p>'
+      + '<p data-path="about.p3" contenteditable="false">' + esc(s.about.p3) + '</p>'
+      + '<div class="stats-row">' + statsHtml + '</div>'
+      + '</div></section>';
+  }
+
+  function renderExperience(s){
+    return '<section id="experience" class="reveal"><div class="wrap">'
+      + '<h2>Experience</h2>'
+      + '<div class="role-head">'
+        + '<h3 data-path="experience.title" contenteditable="false">' + esc(s.experience.title) + '</h3>'
+        + '<span class="dates" data-path="experience.dates" contenteditable="false">' + esc(s.experience.dates) + '</span>'
+      + '</div>'
+      + '<div class="role-sub" data-path="experience.sub" contenteditable="false">' + esc(s.experience.sub) + '</div>'
+      + bulletList(s.experience.bullets, "experience.bullets")
+      + '</div></section>';
+  }
+
+  function renderProjects(s){
+    var projHtml = s.projects.map(function(p,i){
+      return '<article class="proj-card">'
+        + '<div class="role-head" style="margin-top:0;">'
+          + '<h3 data-path="projects.' + i + '.title" contenteditable="false">' + esc(p.title) + '</h3>'
+          + '<span class="dates" data-path="projects.' + i + '.dates" contenteditable="false">' + esc(p.dates) + '</span>'
+        + '</div>'
+        + '<div class="role-sub" data-path="projects.' + i + '.sub" contenteditable="false">' + esc(p.sub) + '</div>'
+        + '<span class="tag-pill" data-path="projects.' + i + '.tag" contenteditable="false">' + esc(p.tag) + '</span>'
+        + '<details class="proj-details"><summary>Details</summary>' + bulletList(p.bullets, "projects." + i + ".bullets") + '</details>'
+        + '</article>';
+    }).join("");
+    return '<section id="projects" class="reveal"><div class="wrap">'
+      + '<h2>Key projects</h2>'
+      + '<div class="proj-grid">' + projHtml + '</div>'
+      + '</div></section>';
+  }
+
+  function renderCredentials(s){
+    var c = s.credentials;
+    var certsHtml = c.certs.map(function(t,i){
+      return '<div class="badge" data-path="credentials.certs.' + i + '" contenteditable="false">' + esc(t) + '</div>';
+    }).join("");
+    return '<section id="credentials" class="reveal"><div class="wrap">'
+      + '<h2>Credentials</h2>'
+      + '<div class="cred-block">'
+        + '<h3>Education</h3>'
+        + '<div class="edu-block" style="margin-top:0;">'
+          + '<p style="color:var(--ink); font-size:.98rem; margin:0;"><b data-path="credentials.eduDegree" contenteditable="false">' + esc(c.eduDegree) + '</b></p>'
+          + '<p><span data-path="credentials.eduSchool" contenteditable="false">' + esc(c.eduSchool) + '</span><br>'
+          + '<span data-path="credentials.eduDates" contenteditable="false">' + esc(c.eduDates) + '</span></p>'
+          + '<p data-path="credentials.eduCoursework" contenteditable="false">' + esc(c.eduCoursework) + '</p>'
+        + '</div>'
+        + '<h3 style="margin-top:1.8rem;">Certifications</h3>'
+        + '<div class="badges">' + certsHtml + '</div>'
+      + '</div>'
+      + '</div></section>';
+  }
+
+  function renderInterests(s){
+    var listHtml = s.interests.list.map(function(t,i){
+      return '<li><span class="ltag">LDR</span><span data-path="interests.list.' + i + '" contenteditable="false">' + esc(t) + '</span></li>';
+    }).join("");
+    return '<section id="interests" class="reveal"><div class="wrap">'
+      + '<h2>Leadership &amp; Volunteering</h2>'
+      + '<ul class="lead-list">' + listHtml + '</ul>'
+      + '<p class="fulfillment" data-path="interests.note" contenteditable="false">' + esc(s.interests.note) + '</p>'
+      + '</div></section>';
+  }
+
+  function renderReading(s){
+    var chips = [["all","All"],["HIS","History"],["PHI","Philosophy"],["LIT","Literature"],["NRG","Energy"]];
+    var chipHtml = chips.map(function(c){
+      return '<button type="button" class="chip" data-filter="' + c[0] + '" aria-pressed="' + (c[0] === "all" ? "true" : "false") + '">' + c[1] + '</button>';
+    }).join("");
+    var itemsHtml = s.reading.items.map(function(it,i){
+      return '<li data-cat="' + escAttr(it.cat) + '">'
+        + '<span class="cat-tag">' + esc(it.cat) + '</span>'
+        + '<span data-path="reading.items.' + i + '.text" contenteditable="false">' + esc(it.text) + '</span>'
+        + '</li>';
+    }).join("");
+    return '<section id="reading" class="reveal"><div class="wrap">'
+      + '<h2>Reading</h2>'
+      + '<p data-path="reading.intro" contenteditable="false">' + esc(s.reading.intro) + '</p>'
+      + '<div class="chip-row" id="chipRow">' + chipHtml + '</div>'
+      + '<ul class="reading-list" id="readingList">' + itemsHtml + '</ul>'
+      + '</div></section>';
+  }
+
+  function renderSections(s){
+    return renderAbout(s) + renderExperience(s) + renderProjects(s) + renderCredentials(s) + renderInterests(s) + renderReading(s);
+  }
+
+  function renderFooterInner(s){
+    return '<div class="wrap footer-grid">'
+      + '<div class="contact-info">' + contactItems(s.contact, false) + '</div>'
+      + '<a href="mailto:' + escAttr(s.contact.email) + '" class="ctrl-btn accent" style="text-decoration:none;">Send a message</a>'
+      + '</div>'
+      + '<div class="wrap fine">' + esc(s.footerTagline) + '</div>';
+  }
+
+  // ---------- mount ----------
+  var topEl = document.getElementById("top");
+  var footerEl = document.getElementById("contact");
+  var revealObserver = null;
+  var navObserver = null;
+  var SECTION_IDS = ["about","experience","projects","credentials","interests","reading","contact"];
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function setupObservers(){
+    if(revealObserver) revealObserver.disconnect();
+    if(navObserver) navObserver.disconnect();
+
+    var revealEls = topEl.querySelectorAll(".reveal");
+    revealObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add("in-view");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(function(el){ revealObserver.observe(el); });
+
+    var navLinks = Array.prototype.slice.call(document.querySelectorAll("[data-section-link]"));
+    var targets = SECTION_IDS.map(function(id){ return document.getElementById(id); }).filter(Boolean);
+    navObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(!entry.isIntersecting) return;
+        navLinks.forEach(function(a){ a.classList.remove("active"); a.removeAttribute("aria-current"); });
+        var matches = navLinks.filter(function(a){ return a.getAttribute("href") === "#" + entry.target.id; });
+        matches.forEach(function(a){ a.classList.add("active"); a.setAttribute("aria-current","true"); });
+      });
+    }, { rootMargin: "-40% 0px -50% 0px", threshold: 0 });
+    targets.forEach(function(t){ navObserver.observe(t); });
+  }
+
+  function setupStatCounters(){
+    var cells = topEl.querySelectorAll(".stat-num");
+    cells.forEach(function(el){
+      var full = el.textContent;
+      if(reduceMotion) return;
+      var m = full.match(/^([^\d]*)(\d+(?:\.\d+)?)(.*)$/);
+      if(!m) return;
+      var prefix = m[1], target = parseFloat(m[2]), decimals = (m[2].split(".")[1] || "").length, suffix = m[3];
+      el.textContent = prefix + (0).toFixed(decimals) + suffix;
+      var obs = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(!entry.isIntersecting) return;
+          obs.disconnect();
+          var start = null, dur = 1100;
+          function step(ts){
+            if(start === null) start = ts;
+            var p = Math.min((ts - start) / dur, 1);
+            var eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = prefix + (target * eased).toFixed(decimals) + suffix;
+            if(p < 1){ requestAnimationFrame(step); } else { el.textContent = full; }
+          }
+          requestAnimationFrame(step);
+        });
+      }, { threshold: 0.4 });
+      obs.observe(el);
+    });
+  }
+
+  function mount(skipReveal){
+    topEl.innerHTML = renderHero(STATE) + renderSections(STATE);
+    footerEl.innerHTML = renderFooterInner(STATE);
+    setupObservers();
+    setupStatCounters();
+    if(skipReveal){
+      topEl.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("in-view"); });
+    }
+  }
+
+  mount(false);
+
+  // ---------- back-to-top ----------
+  var toTop = document.getElementById("toTop");
+  function updateToTop(){
+    toTop.classList.toggle("visible", window.scrollY > window.innerHeight * 0.6);
+  }
+  var ticking = false;
+  window.addEventListener("scroll", function(){
+    if(ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){ updateToTop(); ticking = false; });
+  });
+  updateToTop();
+
+  // ---------- theme toggle ----------
+  var root = document.documentElement;
+  var storedTheme = null;
+  try{ storedTheme = localStorage.getItem("theme"); }catch(e){}
+  if(storedTheme === "light" || storedTheme === "dark"){ root.setAttribute("data-theme", storedTheme); }
+
+  document.getElementById("themeToggle").addEventListener("click", function(){
+    var systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var current = root.getAttribute("data-theme") || (systemDark ? "dark" : "light");
+    var next = current === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try{ localStorage.setItem("theme", next); }catch(e){}
+  });
+
+  // ---------- copy to clipboard ----------
+  document.addEventListener("click", function(e){
+    var btn = e.target.closest(".copy-btn");
+    if(!btn) return;
+    var text = btn.getAttribute("data-copy");
+    function done(ok){
+      if(!ok){ btn.title = "Copy failed"; return; }
+      btn.classList.add("copied"); btn.title = "Copied";
+      setTimeout(function(){ btn.classList.remove("copied"); btn.title = "Copy email"; }, 1500);
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ done(false); });
+    } else {
+      done(false);
+    }
+  });
+
+  // ---------- reading filter chips ----------
+  document.addEventListener("click", function(e){
+    var chip = e.target.closest(".chip");
+    if(!chip) return;
+    var row = chip.closest(".chip-row");
+    if(!row) return;
+    row.querySelectorAll(".chip").forEach(function(c){ c.setAttribute("aria-pressed", c === chip ? "true" : "false"); });
+    var filter = chip.getAttribute("data-filter");
+    var list = document.getElementById("readingList");
+    if(!list) return;
+    list.querySelectorAll("li").forEach(function(li){
+      li.hidden = !(filter === "all" || li.getAttribute("data-cat") === filter);
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>
